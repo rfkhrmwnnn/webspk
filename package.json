@@ -4,7 +4,7 @@
   "description": "Root for Vercel deployment",
   "main": "api/index.js",
   "scripts": {
-    "build": "cd frontend && npm install && npm run build"
+    "build": "cd frontend && npm install && npm run build && cp -r dist ../dist"
   },
   "dependencies": {
     "cors": "^2.8.5",
