@@ -1,0 +1,13 @@
+{
+  "name": "webspk-root",
+  "version": "1.0.0",
+  "description": "Root for Vercel deployment",
+  "main": "api/index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "pg": "^8.11.3",
+    "xlsx": "^0.18.5"
+  }
+}
