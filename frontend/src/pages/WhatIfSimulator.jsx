@@ -5,7 +5,7 @@ import { calculateTopsis } from '../utils/topsis';
 
 const WhatIfSimulator = () => {
   const [weights, setWeights] = useState({
-    aud: 15, sd: 10, smp: 15, sma: 20, disabilitas: 20, lansia: 15, hamil: 5
+    paud: 15, sd: 10, smp: 15, sma: 20, disabilitas: 20, lansia: 15, hamil: 5
   });
 
   const handleSliderChange = (e, key) => {
