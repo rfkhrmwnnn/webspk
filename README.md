@@ -61,7 +61,7 @@ Aplikasi ini dirancang untuk mempermudah pengambilan keputusan dan menganalisis 
 
 ### 2. Analisis Data Excel (`ExcelAnalysis.jsx`)
 **Fungsi Utama:** Menampilkan visualisasi data analitik yang diekstrak langsung dari file Excel penyaluran bantuan (SP2D).
-- **Statistik Global:** Menampilkan total penerima bantuan (KPM), total dana yang disalurkan, dan rata-rata nominal bantuan per orang.
+- **Statistik Global:** Menampilkan total penerima bantuan (PKH), total dana yang disalurkan, dan rata-rata nominal bantuan per orang.
 - **Distribusi Komponen:** Berupa grafik (*Pie Chart*) yang memperlihatkan proporsi jumlah individu per kategori komponen (AUD, SD, SMP, SMA, Lansia, Disabilitas, Hamil).
 - **Sebaran Nominal Bantuan:** Berupa grafik (*Bar Chart*) yang mengelompokkan penerima berdasarkan rentang nominal uang yang diterima.
 - **Tabel Sampel Data:** Menampilkan cuplikan data hasil ekstraksi dari sheet TERSANA sebagai referensi cepat (tanpa nomor KK untuk menjaga privasi).
