@@ -7,8 +7,7 @@ const AlternativesManager = () => {
   
   const filteredData = useMemo(() => {
     return tersanaData.filter(item => 
-      item.pengurus.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      item.no_kk.includes(searchTerm)
+      item.pengurus.toLowerCase().includes(searchTerm.toLowerCase())
     );
   }, [searchTerm]);
 
@@ -38,7 +37,7 @@ const AlternativesManager = () => {
         <div className="relative w-64">
           <input 
             type="text" 
-            placeholder="Cari KK atau Nama..." 
+            placeholder="Cari Nama..." 
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
@@ -55,7 +54,6 @@ const AlternativesManager = () => {
         <table className="w-full text-left border-collapse whitespace-nowrap">
           <thead>
             <tr className="bg-gray-50 border-b border-gray-200 text-gray-600 text-sm">
-              <th className="py-3 px-4 font-medium">No KK</th>
               <th className="py-3 px-4 font-medium">Nama Kepala Keluarga</th>
               <th className="py-3 px-4 font-medium text-center">C1</th>
               <th className="py-3 px-4 font-medium text-center">C2</th>
@@ -70,7 +68,6 @@ const AlternativesManager = () => {
           <tbody className="divide-y divide-gray-100">
             {displayData.map((row, idx) => (
               <tr key={idx} className="hover:bg-gray-50/50 transition-colors text-sm text-gray-700">
-                <td className="py-3 px-4 font-medium text-gray-900">{row.no_kk}</td>
                 <td className="py-3 px-4">{row.pengurus}</td>
                 <td className="py-3 px-4 text-center">{row.aud}</td>
                 <td className="py-3 px-4 text-center">{row.sd}</td>

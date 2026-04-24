@@ -132,7 +132,6 @@ const TopsisResult = () => {
                       <td className="py-5 px-6">
                         <div>
                           <p className="font-bold text-slate-900">{row.name}</p>
-                          <p className="text-[10px] text-slate-400 font-medium">KK: {row.kk}</p>
                         </div>
                       </td>
                       <td className="py-5 px-6 font-mono font-bold text-indigo-600">

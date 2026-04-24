@@ -171,7 +171,6 @@ const ExcelAnalysis = () => {
                   <td className="px-6 py-4">
                     <div className="flex flex-col">
                       <span className="text-sm font-bold text-slate-900">{row.pengurus}</span>
-                      <span className="text-xs text-slate-500">KK: {row.no_kk}</span>
                     </div>
                   </td>
                   <td className="px-6 py-4">
