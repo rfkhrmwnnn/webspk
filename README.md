@@ -7,7 +7,7 @@ Sistem Pendukung Keputusan (SPK) untuk penentuan prioritas penerima bantuan Prog
 - **Analisis Excel**: Ekstraksi dan breakdown data langsung dari sheet "TERSANA".
 - **Kalkulasi TOPSIS**: Perhitungan peringkat transparan dengan matriks keputusan dan normalisasi.
 - **Simulasi What-If**: Simulasi perubahan bobot kriteria untuk melihat dampak perubahan ranking.
-- **Manajemen Kriteria**: Pengaturan bobot untuk 7 komponen PKH (AUD, SD, SMP, SMA, Lansia, Disabilitas, Hamil).
+- **Manajemen Kriteria**: Pengaturan bobot untuk 7 komponen PKH (PAUD, SD, SMP, SMA, Lansia, Disabilitas, Hamil).
 
 ## Persyaratan Sistem
 - [Node.js](https://nodejs.org/) (versi 16 atau lebih baru)
