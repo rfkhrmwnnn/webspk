@@ -6,17 +6,15 @@ export const calculateTopsis = (data, weights = null) => {
   if (!data || data.length === 0) return [];
 
   // Define criteria keys
-  const criteria = ['aud', 'sd', 'smp', 'sma', 'disabilitas', 'lansia', 'hamil'];
-  
+  const criteria = ['aud', 'sd', 'smp', 'sma', 'lansia'];
+
   // Default weights if not provided
   const defaultWeights = {
-    aud: 0.15,
-    sd: 0.10,
-    smp: 0.15,
-    sma: 0.20,
-    disabilitas: 0.20,
-    lansia: 0.15,
-    hamil: 0.05
+    paud: 0.20,
+    sd: 0.15,
+    smp: 0.20,
+    sma: 0.25,
+    lansia: 0.20
   };
 
   const activeWeights = weights || defaultWeights;
@@ -31,12 +29,12 @@ export const calculateTopsis = (data, weights = null) => {
     return Math.sqrt(sumSquare) || 1; // Avoid division by zero
   });
 
-  const normalizedMatrix = matrix.map(row => 
+  const normalizedMatrix = matrix.map(row =>
     row.map((val, colIndex) => val / dividers[colIndex])
   );
 
   // 3. Weighted Normalized Matrix (Y)
-  const weightedMatrix = normalizedMatrix.map(row => 
+  const weightedMatrix = normalizedMatrix.map(row =>
     row.map((val, colIndex) => val * activeWeights[criteria[colIndex]])
   );
 
@@ -53,11 +51,11 @@ export const calculateTopsis = (data, weights = null) => {
   // 5. Calculate Distances (S+ and S-)
   const results = data.map((item, rowIndex) => {
     const row = weightedMatrix[rowIndex];
-    
+
     const distancePositive = Math.sqrt(
       row.reduce((sum, val, colIndex) => sum + Math.pow(val - idealPositive[colIndex], 2), 0)
     );
-    
+
     const distanceNegative = Math.sqrt(
       row.reduce((sum, val, colIndex) => sum + Math.pow(val - idealNegative[colIndex], 2), 0)
     );

@@ -7,7 +7,7 @@ Sistem Pendukung Keputusan (SPK) untuk penentuan prioritas penerima bantuan Prog
 - **Analisis Excel**: Ekstraksi dan breakdown data langsung dari sheet "TERSANA".
 - **Kalkulasi TOPSIS**: Perhitungan peringkat transparan dengan matriks keputusan dan normalisasi.
 - **Simulasi What-If**: Simulasi perubahan bobot kriteria untuk melihat dampak perubahan ranking.
-- **Manajemen Kriteria**: Pengaturan bobot untuk 7 komponen PKH (PAUD, SD, SMP, SMA, Lansia, Disabilitas, Hamil).
+- **Manajemen Kriteria**: Pengaturan bobot untuk 5 komponen PKH (PAUD, SD, SMP, SMA, Lansia).
 
 ## Persyaratan Sistem
 - [Node.js](https://nodejs.org/) (versi 16 atau lebih baru)
@@ -62,19 +62,19 @@ Aplikasi ini dirancang untuk mempermudah pengambilan keputusan dan menganalisis 
 ### 2. Analisis Data Excel (`ExcelAnalysis.jsx`)
 **Fungsi Utama:** Menampilkan visualisasi data analitik yang diekstrak langsung dari file Excel penyaluran bantuan (SP2D).
 - **Statistik Global:** Menampilkan total penerima bantuan (PKH), total dana yang disalurkan, dan rata-rata nominal bantuan per orang.
-- **Distribusi Komponen:** Berupa grafik (*Pie Chart*) yang memperlihatkan proporsi jumlah individu per kategori komponen (AUD, SD, SMP, SMA, Lansia, Disabilitas, Hamil).
+- **Distribusi Komponen:** Berupa grafik (*Pie Chart*) yang memperlihatkan proporsi jumlah individu per kategori komponen (PAUD, SD, SMP, SMA, Lansia).
 - **Sebaran Nominal Bantuan:** Berupa grafik (*Bar Chart*) yang mengelompokkan penerima berdasarkan rentang nominal uang yang diterima.
 - **Tabel Sampel Data:** Menampilkan cuplikan data hasil ekstraksi dari sheet TERSANA sebagai referensi cepat (tanpa nomor KK untuk menjaga privasi).
 
 ### 3. Kelola Data Warga / Alternatif (`AlternativesManager.jsx`)
 **Fungsi Utama:** Mengelola data penduduk yang menjadi calon/penerima bantuan (Alternatif).
-- Menampilkan tabel berisi nama kepala keluarga beserta jumlah dari masing-masing komponen yang dimiliki (C1 hingga C7) serta total nominal bantuan.
+- Menampilkan tabel berisi nama kepala keluarga beserta jumlah dari masing-masing komponen yang dimiliki (C1 hingga C5) serta total nominal bantuan.
 - Menyediakan fitur pencarian warga berdasarkan nama untuk mempermudah pengecekan data spesifik.
 - Merupakan data mentah (*decision matrix*) sebelum diproses oleh algoritma.
 
 ### 4. Kelola Kriteria (`CriteriaManager.jsx`)
 **Fungsi Utama:** Menentukan variabel penentu (Kriteria) serta bobot tingkat kepentingannya dalam perhitungan SPK.
-- Pengguna dapat melihat kriteria apa saja yang digunakan (contoh: Lansia, Disabilitas, Anak Usia Dini, dll).
+- Pengguna dapat melihat kriteria apa saja yang digunakan (contoh: Lansia, Anak Usia Dini/PAUD, dll).
 - Pengguna dapat menentukan tipe kriteria tersebut, apakah termasuk *Benefit* (semakin besar semakin baik) atau *Cost* (semakin kecil semakin baik).
 - Memberikan bobot persentase untuk setiap kriteria yang nantinya akan dipakai oleh metode TOPSIS.
 

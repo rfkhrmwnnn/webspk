@@ -17,13 +17,11 @@ const ExcelAnalysis = () => {
     const avgNominal = totalNominal / totalRecipients;
     
     const componentCounts = {
-      aud: excelData.reduce((acc, curr) => acc + curr.aud, 0),
+      paud: excelData.reduce((acc, curr) => acc + curr.aud, 0),
       sd: excelData.reduce((acc, curr) => acc + curr.sd, 0),
       smp: excelData.reduce((acc, curr) => acc + curr.smp, 0),
       sma: excelData.reduce((acc, curr) => acc + curr.sma, 0),
       lansia: excelData.reduce((acc, curr) => acc + curr.lansia, 0),
-      disabilitas: excelData.reduce((acc, curr) => acc + curr.disabilitas, 0),
-      hamil: excelData.reduce((acc, curr) => acc + curr.hamil, 0),
     };
 
     const pieData = Object.entries(componentCounts).map(([name, value]) => ({
@@ -65,7 +63,7 @@ const ExcelAnalysis = () => {
           </div>
           <div>
             <p className="text-sm text-slate-500 font-medium">Total Penerima</p>
-            <p className="text-2xl font-bold text-slate-900">{stats.totalRecipients.toLocaleString()} KPM</p>
+            <p className="text-2xl font-bold text-slate-900">{stats.totalRecipients.toLocaleString()} PKH</p>
           </div>
         </div>
 
@@ -158,9 +156,8 @@ const ExcelAnalysis = () => {
                 <th className="px-6 py-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">No</th>
                 <th className="px-6 py-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">Nama Pengurus</th>
                 <th className="px-6 py-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">Total Komp</th>
-                <th className="px-6 py-4 text-xs font-semibold text-slate-500 uppercase tracking-wider text-center">AUD</th>
+                <th className="px-6 py-4 text-xs font-semibold text-slate-500 uppercase tracking-wider text-center">PAUD</th>
                 <th className="px-6 py-4 text-xs font-semibold text-slate-500 uppercase tracking-wider text-center">Lansia</th>
-                <th className="px-6 py-4 text-xs font-semibold text-slate-500 uppercase tracking-wider text-center">Disab</th>
                 <th className="px-6 py-4 text-xs font-semibold text-slate-500 uppercase tracking-wider text-right">Nominal</th>
               </tr>
             </thead>
@@ -180,7 +177,6 @@ const ExcelAnalysis = () => {
                   </td>
                   <td className="px-6 py-4 text-center text-sm text-slate-600">{row.aud}</td>
                   <td className="px-6 py-4 text-center text-sm text-slate-600">{row.lansia}</td>
-                  <td className="px-6 py-4 text-center text-sm text-slate-600">{row.disabilitas}</td>
                   <td className="px-6 py-4 text-right">
                     <span className="text-sm font-bold text-indigo-600">Rp {row.nominal.toLocaleString('id-ID')}</span>
                   </td>

@@ -60,8 +60,6 @@ const AlternativesManager = () => {
               <th className="py-3 px-4 font-medium text-center">C3</th>
               <th className="py-3 px-4 font-medium text-center">C4</th>
               <th className="py-3 px-4 font-medium text-center">C5</th>
-              <th className="py-3 px-4 font-medium text-center">C6</th>
-              <th className="py-3 px-4 font-medium text-center">C7</th>
               <th className="py-3 px-4 font-medium text-right">Nominal</th>
             </tr>
           </thead>
@@ -74,8 +72,6 @@ const AlternativesManager = () => {
                 <td className="py-3 px-4 text-center">{row.smp}</td>
                 <td className="py-3 px-4 text-center">{row.sma}</td>
                 <td className="py-3 px-4 text-center">{row.lansia}</td>
-                <td className="py-3 px-4 text-center">{row.disabilitas}</td>
-                <td className="py-3 px-4 text-center">{row.hamil}</td>
                 <td className="py-3 px-4 text-right font-bold text-indigo-600">Rp {row.nominal.toLocaleString('id-ID')}</td>
               </tr>
             ))}

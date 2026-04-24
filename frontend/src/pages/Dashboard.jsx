@@ -25,11 +25,11 @@ const Dashboard = () => {
     const anomalies = tersanaData.filter(item => 
       !item.nominal || 
       (item.aud === 0 && item.sd === 0 && item.smp === 0 && item.sma === 0 && 
-       item.disabilitas === 0 && item.lansia === 0 && item.hamil === 0)
+       item.lansia === 0)
     ).length;
 
     return [
-      { title: 'Total Penerima (KPM)', value: totalRecipients.toLocaleString(), icon: Users, color: 'bg-blue-600' },
+      { title: 'Total Penerima (PKH)', value: totalRecipients.toLocaleString(), icon: Users, color: 'bg-blue-600' },
       { title: 'Total Dana SP2D', value: `Rp ${totalNominal.toLocaleString('id-ID')}`, icon: CreditCard, color: 'bg-emerald-600' },
       { title: 'Rata-rata Bantuan', value: `Rp ${Math.round(avgNominal).toLocaleString('id-ID')}`, icon: Target, color: 'bg-indigo-600' },
       { title: 'Anomali Data', value: anomalies.toLocaleString(), icon: AlertTriangle, color: 'bg-amber-600' },
@@ -70,12 +70,11 @@ const Dashboard = () => {
 
   const componentStats = useMemo(() => {
     const totals = {
-      'Anak Usia Dini': tersanaData.reduce((sum, i) => sum + (i.aud || 0), 0),
+      'PAUD': tersanaData.reduce((sum, i) => sum + (i.aud || 0), 0),
       'SD': tersanaData.reduce((sum, i) => sum + (i.sd || 0), 0),
       'SMP': tersanaData.reduce((sum, i) => sum + (i.smp || 0), 0),
       'SMA': tersanaData.reduce((sum, i) => sum + (i.sma || 0), 0),
       'Lansia': tersanaData.reduce((sum, i) => sum + (i.lansia || 0), 0),
-      'Disabilitas': tersanaData.reduce((sum, i) => sum + (i.disabilitas || 0), 0),
     };
     return Object.entries(totals).map(([name, value]) => ({ name, value }));
   }, []);
@@ -107,7 +106,7 @@ const Dashboard = () => {
           <div className="flex items-center justify-between mb-8">
             <div>
               <h3 className="text-xl font-bold text-slate-800">Distribusi Nominal Bantuan</h3>
-              <p className="text-sm text-slate-500">Jumlah KPM berdasarkan rentang dana yang diterima</p>
+              <p className="text-sm text-slate-500">Jumlah PKH berdasarkan rentang dana yang diterima</p>
             </div>
           </div>
           <div className="h-80">

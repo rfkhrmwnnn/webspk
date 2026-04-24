@@ -7,13 +7,11 @@ const CriteriaManager = () => {
   // Dummy data representing API response
   useEffect(() => {
     setCriteria([
-      { id: 1, code: 'C1', name: 'Anak Usia Dini (AUD)', weight: 15, type: 'Benefit' },
-      { id: 2, code: 'C2', name: 'Siswa SD', weight: 10, type: 'Benefit' },
-      { id: 3, code: 'C3', name: 'Siswa SMP', weight: 15, type: 'Benefit' },
-      { id: 4, code: 'C4', name: 'Siswa SMA', weight: 20, type: 'Benefit' },
-      { id: 5, code: 'C5', name: 'Lanjut Usia (Lansia)', weight: 15, type: 'Benefit' },
-      { id: 6, code: 'C6', name: 'Disabilitas', weight: 20, type: 'Benefit' },
-      { id: 7, code: 'C7', name: 'Ibu Hamil', weight: 5, type: 'Benefit' },
+      { id: 1, code: 'C1', name: 'Anak Usia Dini (PAUD)', weight: 20, type: 'Benefit' },
+      { id: 2, code: 'C2', name: 'Siswa SD', weight: 15, type: 'Benefit' },
+      { id: 3, code: 'C3', name: 'Siswa SMP', weight: 20, type: 'Benefit' },
+      { id: 4, code: 'C4', name: 'Siswa SMA', weight: 25, type: 'Benefit' },
+      { id: 5, code: 'C5', name: 'Lanjut Usia (Lansia)', weight: 20, type: 'Benefit' },
     ]);
   }, []);
 

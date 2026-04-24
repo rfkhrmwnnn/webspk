@@ -185,7 +185,7 @@ const TopsisResult = () => {
         <div>
           <h4 className="text-indigo-900 font-bold">Tentang Kalkulasi Ini</h4>
           <p className="text-indigo-700 text-sm mt-1 leading-relaxed font-medium">
-            Kalkulasi ini menggunakan 7 kriteria dari data SP2D April-Juni 2025. Metode TOPSIS (Technique for Order of Preference by Similarity to Ideal Solution) memberikan hasil peringkat berdasarkan jarak terdekat dengan solusi ideal positif dan jarak terjauh dari solusi ideal negatif.
+            Kalkulasi ini menggunakan 5 kriteria dari data SP2D April-Juni 2025. Metode TOPSIS (Technique for Order of Preference by Similarity to Ideal Solution) memberikan hasil peringkat berdasarkan jarak terdekat dengan solusi ideal positif dan jarak terjauh dari solusi ideal negatif.
           </p>
         </div>
       </div>
